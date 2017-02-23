@@ -310,12 +310,12 @@ while game_over == False:
         print "."
         time.sleep(.3)
         print "!!"
-        os.system("say 'OH MY GOD WATCH OUT'")
+        os.system("say 'OH MY GOD. WATCH OUT'")
         time.sleep(1.5)
         os.system("say -r 50 'DEAR GOD'")
         time.sleep(.7)
         print "You have encountered a giant Cave Troll while travelling through the Mines of Moria!"
-        os.system("say 'You have encountered a Cave Troll while travelling through the Mines of Moria!'")
+        os.system("say 'You have encountered a giant Cave Troll while travelling through the Mines of Moria!'")
         time.sleep(2)
         print "Will you fight?"
         os.system("say 'Will you fight? Or are you a coward like Michael Irby'")
@@ -338,7 +338,7 @@ while game_over == False:
                 time.sleep(.5)
                 print "The Cave_Troll named %s has taken %d damage thanks to %s's speed!" % (Cave_Troll.name, hero_strength, hero_name)
                 os.system("say 'The Cave Troll named Pateesa has taken damage thanks to your speed'")
-                time.sleep(2)
+                time.sleep(1.5)
                 print "The Cave_Troll now has %d health left." % (enemy_health)
 
                 print "%s now has %d health left." % (hero_name, hero_health)
@@ -373,7 +373,7 @@ while game_over == False:
             print "Dammit. You are just like the Irbinator"
             os.system("say 'Dammit... You are just like Irby. Game Over'")
             time.sleep(1.5)
-            os.system("say 'For the purpose of the demo, we will continue the game as if you are not a coward'")
+            os.system("say --voice=tessa 'For the purpose of the demo, we will continue the game as if you are not a coward'")
             time.sleep(1.5)
             print "The Cave_Troll lunges at you swiftly"
             os.system("say 'The Cave_Troll lunges at you swiftly'")
@@ -444,8 +444,8 @@ while game_over == False:
                                     print "Still working on the rest of the game. Thanks for playing"
                                     os.system("say 'More coming soon. Thanks for playing'")
                     elif input == 2:
-                        print "The Cave troll Blocks the exit. You cannot escape"
-                        os.system("Why are you so cowardly? Either way, the Cave Troll blocked the exit. You cannot escape")
+                        print "The Cave Troll Blocks the exit. You cannot escape"
+                        os.system("say 'Why are you so cowardly? Either way, the Cave Troll blocked the exit. You cannot escape'")
                         time.sleep(2)
                         if Cave_Troll.speed < hero_speed:
                             enemy_health = enemy_health - hero_strength;
@@ -459,7 +459,7 @@ while game_over == False:
                             print "The Cave_Troll now has %d health left." % (enemy_health)
                             if enemy_health <= 0:
                                 print "%s has defeated the Cave Troll named %s" % (hero_name, Cave_Troll.name)
-                                os.system("say 'You have defeated the Cave Troll named Pateesa'")
+                                os.system("say  'You have defeated the Cave Troll named Pateesa'")
                                 time.sleep(2);
                                 game_over = True
                                 if game_over == True:
