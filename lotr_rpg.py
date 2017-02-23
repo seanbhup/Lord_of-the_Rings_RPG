@@ -29,31 +29,31 @@ while game_over == False:
     os.system("say --voice=tessa 'Choose a character'")
     print "Choose a character"
     print "------------------"
-    time.sleep(.2)
+    time.sleep(.1)
     print "1. Aragorn"
-    time.sleep(.2)
+    time.sleep(.1)
     print "2. Frodo"
-    time.sleep(.2)
+    time.sleep(.1)
     print "3. Samwise_Gamgee"
-    time.sleep(.2)
+    time.sleep(.1)
     print "4. Gandalf"
-    time.sleep(.2)
+    time.sleep(.1)
     print "5. Gimli"
-    time.sleep(.2)
+    time.sleep(.1)
     print "6. Boromir"
-    time.sleep(.2)
+    time.sleep(.1)
     print "7. Legolas_Greenleaf"
-    time.sleep(.2)
+    time.sleep(.1)
     print "8. Pippin_Took"
-    time.sleep(.2)
+    time.sleep(.1)
     print "9. Merry_Brandybuck"
-    time.sleep(.2)
+    time.sleep(.1)
     print "10. Faramir"
-    time.sleep(.2)
+    time.sleep(.1)
     print "11. Smeagle"
-    time.sleep(.2)
+    time.sleep(.1)
     print "12. Drew_Parker"
-    time.sleep(.2)
+    time.sleep(.1)
     print "> ",
     input = int(raw_input())
 
@@ -407,6 +407,72 @@ while game_over == False:
                         time.sleep(.3)
                         print "Still working on the rest of the game. Thanks for playing"
                         os.system("say 'More coming soon. Thanks for playing'")
+                else:
+                    print "The troll named %s is on his last legs" % (Cave_Troll.name)
+                    os.system("say 'The troll named Pateesa is on his last legs.'")
+                    time.sleep(.3)
+                    print "Keep fighting?"
+                    os.system("say 'Keep fighting?'")
+                    time.sleep(.3)
+                    print "1: Fight"
+                    print "2: Flee"
+                    input = int(raw_input())
+                    # yes
+                    if input == 1:
+                        if Cave_Troll.speed < hero_speed:
+                            enemy_health = enemy_health - hero_strength;
+                            hero_health = hero_health - (.5 * Cave_Troll.strength)
+                            print "You trade blows with the cave troll again"
+                            os.system("say 'You trade blows with the cave troll again.'")
+                            time.sleep(.5)
+                            print "The Cave_Troll named %s has taken %d damage thanks to %s's speed!" % (Cave_Troll.name, hero_strength, hero_name)
+                            os.system("say 'The Cave Troll named Pateesa has taken damage thanks to your speed'")
+                            time.sleep(2)
+                            print "The Cave_Troll now has %d health left." % (enemy_health)
+                            if enemy_health <= 0:
+                                print "%s has defeated the Cave Troll named %s" % (hero_name, Cave_Troll.name)
+                                os.system("say 'You have defeated the Cave Troll named Pateesa'")
+                                time.sleep(2);
+                                game_over = True
+                                if game_over == True:
+                                    print "."
+                                    time.sleep(.3)
+                                    print "."
+                                    time.sleep(.3)
+                                    print "."
+                                    time.sleep(.3)
+                                    print "Still working on the rest of the game. Thanks for playing"
+                                    os.system("say 'More coming soon. Thanks for playing'")
+                    elif input == 2:
+                        print "The Cave troll Blocks the exit. You cannot escape"
+                        os.system("Why are you so cowardly? Either way, the Cave Troll blocked the exit. You cannot escape")
+                        time.sleep(2)
+                        if Cave_Troll.speed < hero_speed:
+                            enemy_health = enemy_health - hero_strength;
+                            hero_health = hero_health - (.5 * Cave_Troll.strength)
+                            print "You trade blows with the cave troll again"
+                            os.system("say 'You trade blows with the cave troll once more.'")
+                            time.sleep(.5)
+                            print "The Cave_Troll named %s has taken %d damage thanks to %s's speed!" % (Cave_Troll.name, hero_strength, hero_name)
+                            os.system("say 'The Cave Troll named Pateesa has taken damage thanks to your speed'")
+                            time.sleep(2)
+                            print "The Cave_Troll now has %d health left." % (enemy_health)
+                            if enemy_health <= 0:
+                                print "%s has defeated the Cave Troll named %s" % (hero_name, Cave_Troll.name)
+                                os.system("say 'You have defeated the Cave Troll named Pateesa'")
+                                time.sleep(2);
+                                game_over = True
+                                if game_over == True:
+                                    print "."
+                                    time.sleep(.3)
+                                    print "."
+                                    time.sleep(.3)
+                                    print "."
+                                    time.sleep(.3)
+                                    print "Still working on the rest of the game. Thanks for playing"
+                                    os.system("say 'More coming soon. Thanks for playing'")
+
+
             else:
                 hero_health = hero_health - Cave_Troll.strength
                 enemy_health = Cave_Troll.health - (.5 * hero_strength)

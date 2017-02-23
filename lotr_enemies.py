@@ -23,7 +23,7 @@ class Anti_FellowShip(object):
 # weapon type 0 = physical, type 1 = magic, type 2 = hybrid
 # name, race, health, speed, strength, weapon, weapon_type, weapon_power, physical_resist, magic_resist
 Orc_Grunt = Anti_FellowShip("Zok","Orc",5,2,2,"Rusty Dagger","Physical",2,3,1)
-Cave_Troll = Anti_FellowShip("Pateesa","Troll",6,2,9,"Giant Club","Physical",8,9,2)
+Cave_Troll = Anti_FellowShip("Pateesa","Troll",7,2,9,"Giant Club","Physical",8,9,2)
 Lurtz = Anti_FellowShip("Lurtz","Uruk-hai",50,7,7,"Sword & Shield","Physical",8,8,3)
 Nazgul = Anti_FellowShip("Nazgul","Ring Wraith",100,10,9,"Black Mace","Physical",9,9,8)
 Balrog = Anti_FellowShip("Balrog","Valarauka",200,7,10,"Fire","Magic",10,9,9)
